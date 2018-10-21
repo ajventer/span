@@ -6,11 +6,6 @@ however it does have the advantage of utilising some of python's most elegant fu
 especially as it relates to data abstraction. In a larger project, they could be the difference
 between elegant, readable code or spaghetti.
 
-## Sidenote:
-All the code here is my own with the sole exception of quicksort.py which is adapated from a stackoverflow answer 
-but quicksort is such a basic algorithm that it's just silly to write from scratch everytime when such elegant 
-pre-written solutions already exist.
-
 ##Usage:
 The code was written and tested on a Linux system running python 3.7.0 - but should work in pretty much any unix-like system
 with python 3. No external dependencies were used, only python native libraries.
