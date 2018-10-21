@@ -19,7 +19,7 @@ if __name__ == '__main__':
     for line in open(args.matches).readlines():
         LT.addMatch(line)
 
-    print (LT.league[0] < LT.league[1])
-
+    c = 0
     for i  in list(LT):
-        print (i)
+        c += 1
+        print ('%s. %s' %(c, i))

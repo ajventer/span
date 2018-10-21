@@ -16,11 +16,10 @@ class LeagueTableTest(unittest.TestCase):
         testLTE2 = LeagueTableEntry('test2')
 
         #Equal scores should be alphabetically ordered
-        assert testLTE1 < testLTE2
+        assert testLTE1 > testLTE2
 
-        #higher score should show as a lower number to automatically order high scores first
         testLTE2.leagueScore = 2
-        assert testLTE2 < testLTE1
+        assert testLTE2 > testLTE1
 
     def testCustomCollection(self):
         testLTE = LeagueTableEntry('test1')

@@ -1,5 +1,5 @@
 from functools import total_ordering
-from quicksort import QuickSort
+import copy
 
 @total_ordering
 class LeagueTableEntry(object):
@@ -10,11 +10,10 @@ class LeagueTableEntry(object):
         self.teamName = teamName
         self.leagueScore = leagueScore
 
-    def __lt__(self, other):
-        #We invert the test, thus allowing for reverse ordering without an extra step later
+    def __gt__(self, other):
+        if self.leagueScore == other.leagueScore:
+            return self.teamName < other.teamName
         if self.leagueScore > other.leagueScore:
-            return True
-        if self.teamName < other.teamName:
             return True
 
     def __eq__(self, other):
@@ -58,10 +57,8 @@ class LeagueTable(object):
         return [i.leagueScore for i in self.league if i.teamName == key][0]
 
     def __iter__(self):
-        QuickSort(self.league).quicksort()
-        for i in self.league:
-            yield(i)
-
+        for i in reversed(sorted(self.league)):
+            yield (i)
 
     def _matchEntries_(self, matchString):
         def __teamsplit__(teamstr):

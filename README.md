@@ -16,7 +16,7 @@ The code was written and tested on a Linux system running python 3.7.0 - but sho
 with python 3. No external dependencies were used, only python native libraries.
 
 To run the main program:
-`./leaguetable`
+`./leaguetable -m sampleInput.txt`
 
 To run the unit tests:
 `./test.py`
