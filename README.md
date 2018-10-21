@@ -12,6 +12,7 @@ with python 3. No external dependencies were used, only python native libraries.
 
 To run the main program:
 `./leaguetable -m sampleInput.txt`
+You can replace 'sampleinput.txt' with any valid match-results input file. As per the given instructions I didn't add any input validation so it will break if the format is invalid.
 
 To run the unit tests:
 `./test.py`
