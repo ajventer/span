@@ -13,8 +13,7 @@ class LeagueTableEntry(object):
     def __gt__(self, other):
         if self.leagueScore == other.leagueScore:
             return self.teamName < other.teamName
-        if self.leagueScore > other.leagueScore:
-            return True
+        return self.leagueScore > other.leagueScore
 
     def __eq__(self, other):
         #This can't actually happen with our data because a team cannot play itself
