@@ -91,6 +91,9 @@ class LeagueTable(object):
         elif list(match.values())[0] == list(match.values())[1]:
             for k in match.keys():
                 self._updateTeam_(k, 1)
+        else:
+            self._updateTeam_(list(match.keys())[0], 0)
+            self._updateTeam_(list(match.keys())[1], 3)
 
 
 
