@@ -1,5 +1,4 @@
 from functools import total_ordering
-import copy
 
 @total_ordering
 class LeagueTableEntry(object):
